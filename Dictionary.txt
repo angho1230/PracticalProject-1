@@ -1,3 +1,13 @@
 3|superintendent|관리자, 감독관
 1|kiwi|키위
-1| apple|사과
+1|apple|사과
+3|abduction|유괴
+3|abductor|유괴자
+3|abecedarian|초학자
+3|abele|사시나무
+3|aberrance|정도를 벗어남
+3|aberrancy|악덕
+3|abetment|교사
+3|abetter|교사자
+3|abhorrence|혐오
+2|abidance|지속

@@ -177,4 +177,68 @@ public class WordCRUD implements ICRUD{
         listAll(keyword);
 
     }
+
+    public void wordGame(){
+        s.nextLine();
+        if(list.size() < 10) {
+            System.out.println("최소 10개의 단어가 필요합니다");
+            return;
+        }
+        int maxScore = 0;
+        int score = 0;
+        ArrayList<Integer> idxs= selectRandomWordIndex();
+        for(int i = 0; i < 10; i++){
+            Word word=list.get(idxs.get(i));
+            if(wordAsk(word)){
+                score += word.getLevel();
+            }
+            maxScore += word.getLevel();
+        }
+        System.out.println("당신의 점수는 " + score + "/" + maxScore + "입니다.\n");
+    }
+
+    public ArrayList<Integer> selectRandomWordIndex(){
+        Integer len = list.size();
+        ArrayList<Integer> idxs = new ArrayList<>();
+        for(int i = 0; i < 10;){
+            Double r = Math.random();
+            Integer idx = (int)(len.doubleValue() * r);
+            if(idxs.contains(idx)){
+                continue;
+            }else {
+                idxs.add(idx);
+                i++;
+            }
+        }
+        return idxs;
+    }
+
+    public boolean wordAsk(Word word){
+        System.out.print("Level " + word.getLevel() + ") ");
+        Double r = Math.random();
+        if(r > 0.5){
+            System.out.print(word.getMeaning()+ ": ");
+            String ans = s.nextLine();
+            if(ans.equals(word.getWord())){
+                System.out.println("정답입니다.");
+                return true;
+            }
+            else{
+                System.out.println("틀렸습니다. 정답: " + word.getWord());
+                return false;
+            }
+        }
+        else{
+            System.out.print(word.getWord()+ ": ");
+            String ans = s.nextLine();
+            if(ans.equals(word.getMeaning())){
+                System.out.println("정답입니다.");
+                return true;
+            }
+            else{
+                System.out.println("틀렸습니다. 정답: " + word.getMeaning());
+                return false;
+            }
+        }
+    }
 }
