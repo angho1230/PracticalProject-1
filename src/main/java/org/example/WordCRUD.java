@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+
+
 public class WordCRUD implements ICRUD{
     ArrayList<Word> list;
     Scanner s;

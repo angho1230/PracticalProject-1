@@ -6,6 +6,11 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 
+/***
+ * This class is to manage Word Program.
+ * With Start method, program starts.
+ * This class initiates actual program and receive menu number by using selectMenu method.
+ */
 public class WordManager {
     Scanner s = new Scanner(System.in);
     WordCRUD wordCRUD;
