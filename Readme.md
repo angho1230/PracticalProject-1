@@ -2,7 +2,7 @@
 
 단어 목록
 
-![Alt text](/ScreenShots/wordList.png?raw=true "단어 목록")
+![image](/ScreenShots/wordList.png?raw=true "단어 목록")
 
 단어 추가
 
